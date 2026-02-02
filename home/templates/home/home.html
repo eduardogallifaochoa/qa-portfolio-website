@@ -1,0 +1,119 @@
+{% extends "home/base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="bg-image bg-image-top">
+<div class="container-fluid background-container background-container-top">
+<div class="container content-container d-flex align-items-center flex-wrap">
+    <div class="row">
+        <div class="col">
+            <div class="row d-flex align-self-end">
+                <div class="col">
+                    <h1 class="fade-in-text">QA Automation<span style="color: var(--color-accent); font-family: 'Style Script', cursive;">.</span></h1>
+                    <h1 class="typewriter">Manual + Automation<span style="color: var(--color-accent); font-family: 'Style Script', cursive;">.</span></h1>
+                </div>
+            </div>
+            <div class="row d-flex align-self-start">
+                <div class="col">
+                    <a href="{% url 'contact' %}" class="disabled"><button class="btn btn-primary">Hire Me <i class="fas fa-arrow-right"></i></button></a>
+                </div>
+            </div>            
+        </div>
+    </div>
+</div>
+</div>
+</div>
+<div class="container-fluid section">
+    <div class="container content-container pt-4">
+    <div class="row pt-3">
+        <div class="col">
+            <h1 class="text-start">QA Projects<span style="color: var(--color-accent); font-family: 'Style Script', cursive;">.</span></h1>
+            <p>
+                I build UI automation, API checks, and smoke suites that validate critical flows, catch regressions early,
+                and provide fast feedback. Focus: maintainable Playwright suites, clean reporting, and practical coverage.
+            </p>
+        </div>
+    <div class="container">
+    <div class="row">
+        <div class="card-group d-flex justify-content-between flex-wrap pt-3">
+            <div class="col-lg-4">
+                <div class="card grow mt-2">
+                    <div class="card-header text-center">
+                        <h3>QA Automation Site</h3>
+                    </div>
+                    <img class="img-responsive card-img card-img-top" src="{% static 'home/project_img/qa-automation-site.png' %}" alt="QA Automation Site">
+                    <div class="card-body">
+                        <p class="card-text">Static web + FastAPI for login/contact flows with cross-browser E2E.</p>
+                        <h5 class="card-title text-center">
+                            <a href="https://github.com/eduardogallifaochoa/qa-automation-site" target="_blank"><button class="btn btn-secondary">Repository</button></a>
+                        </h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card grow mt-2">
+                    <div class="card-header text-center">
+                        <h3>Automation Test Store</h3>
+                    </div>
+                    <img class="img-responsive card-img card-img-top" src="{% static 'home/project_img/automationteststore.png' %}" alt="Automation Test Store">
+                    <div class="card-body">
+                        <p class="card-text">Playwright E2E suite automating login, add-to-cart and guest checkout flows.</p>
+                        <h5 class="card-title text-center">
+                            <a href="https://github.com/eduardogallifaochoa/automationteststore" target="_blank"><button class="btn btn-secondary">Repository</button></a>
+                        </h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card grow mt-2">
+                    <div class="card-header text-center">
+                        <h3>Petstore API</h3>
+                    </div>
+                    <img class="img-responsive card-img card-img-top" src="{% static 'home/project_img/petstore-api-playwright.png' %}" alt="Petstore API">
+                    <div class="card-body">
+                        <p class="card-text">API automation against Swagger Petstore covering GET/POST/PUT/DELETE flows.</p>
+                        <h5 class="card-title text-center">
+                            <a href="https://github.com/eduardogallifaochoa/petstore-api-playwright" target="_blank"><button class="btn btn-secondary">Repository</button></a>
+                        </h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+        <div class="container text-center tech-container pt-lg-3 pb-4">
+            <div class="row pt-lg-3 g-2 justify-content-center">
+                <div class="col-auto pt-3">
+                    <i class="fas fa-theater-masks" title="Playwright"></i>
+                </div>
+                <div class="col-auto pt-3">
+                    <i class="fab fa-js-square" title="JavaScript"></i>
+                </div>
+                <div class="col-auto pt-3">
+                    <i class="fab fa-docker" title="Docker"></i>
+                </div>
+                <div class="col-auto pt-3">
+                    <i class="fab fa-kubernetes" title="Kubernetes"></i>
+                </div>
+                <div class="col-auto pt-3">
+                    <i class="fab fa-python" title="Python"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+<div class="bg-image bg-image-bottom">
+<div class="container-fluid background-container background-container-bottom">
+    <div class="container content-container d-flex align-items-center pt-5">
+        <div class="row text-center w-100">
+            <div class="col">
+                <h1>Want to know more<span style="color: var(--color-accent); font-family: 'Bebas Neue', cursive;">?</span></h1>
+                <h5 class="pb-4">It's time to make your project a reality.</h5>
+                <a href="{% url 'contact' %}" class="disabled"><button class="btn btn-primary">Contact Me <i class="fas fa-arrow-right"></i></button></a>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+{% endblock %}

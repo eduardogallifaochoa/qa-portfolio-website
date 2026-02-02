@@ -1,0 +1,106 @@
+{% extends "home/base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="bg-image bg-image-top" style="background-image: url('/media/bea902d2-4afb-45e9-9d6f-d95e2ade8cb0.png'); background-size: cover; background-position: 50% 20%;">
+    <div class="container-fluid background-container-bottom background-container">
+    <div class="container d-flex align-items-center" style="height: 40vh;">
+        <div class="row w-100 text-lg-end">
+            <div class="col">
+                <h1 class="fade-in-text">About Me<span style="color: var(--color-accent); font-family: 'Style Script', cursive;">.</span></h1>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="container content-container pt-5">
+    <div class="row align-items-center">
+        <div class="col-lg-7">
+            <h2>Eduardo Gallifa<span style="color: var(--color-accent); font-family: 'Style Script', cursive;">.</span></h2>
+            <p>QA Manual + Automation | QA Lead | Remote (Mexico, flexible time zone)</p>
+            <p>
+                Email: <a href="mailto:eduardogallifao@gmail.com">eduardogallifao@gmail.com</a><br>
+                GitHub: <a href="https://github.com/eduardogallifaochoa">github.com/eduardogallifaochoa</a><br>
+                Mobile/WhatsApp: <a href="https://wa.me/528331210691">+52 833 121 0691</a>
+            </p>
+        </div>
+    </div>
+    <div class="row pt-2">
+        <div class="col">
+            <h2>Professional Summary<span style="color: var(--color-accent); font-family: 'Style Script', cursive;">.</span></h2>
+            <p>
+                QA Engineer with 1+ year of experience testing web and mobile apps in remote Agile teams. Strong in functional,
+                regression, and exploratory testing; Jira defect lifecycle; and end-to-end validation of fixes. Built Playwright
+                automation (Python/JavaScript) and API checks with CI and reports.
+            </p>
+        </div>
+    </div>
+    <div class="row pt-2">
+        <div class="col">
+            <h2>Core Skills<span style="color: var(--color-accent); font-family: 'Style Script', cursive;">.</span></h2>
+            <ul>
+                <li><strong>Testing:</strong> Functional, Regression, Exploratory, Smoke; test cases, checklists, test plans, test evidence</li>
+                <li><strong>Tools:</strong> Jira, Postman, DevTools, Git/GitHub, Android Studio, 3uTools</li>
+                <li><strong>Automation:</strong> Playwright (Python/JavaScript), Pytest, Page Object Model basics, GitHub Actions CI</li>
+                <li><strong>Technical:</strong> APIs, HTTP methods/status codes, HTML/CSS/JavaScript</li>
+            </ul>
+        </div>
+    </div>
+    <div class="row pt-2">
+        <div class="col">
+            <h2>Experience<span style="color: var(--color-accent); font-family: 'Style Script', cursive;">.</span></h2>
+            <h5>Manual QA Intern | a1qa | Jan 2025 - July 2025</h5>
+            <ul>
+                <li>Developed and executed test cases and checklists for web and mobile features; covered positive, negative, and boundary scenarios ISTQB style.</li>
+                <li>Ran regression and exploratory sessions each sprint to verify requirements, investigate edge cases, and expand coverage.</li>
+                <li>Reported defects in Jira with clear steps, expected/actual results, environment details, and supporting artifacts; re-tested fixes and ran smoke checks.</li>
+                <li>Used DevTools and Charles Proxy to inspect requests, reproduce issues, and capture logs/recordings.</li>
+            </ul>
+            <h5>Logistics Supervisor | AGE Energy | 2022 - 2023</h5>
+            <ul>
+                <li>Coordinated daily logistics operations and delivery routes; ensured on-time execution and clear stakeholder communication.</li>
+                <li>Tracked KPIs in Excel and improved reporting cadence for operational visibility and decision-making.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="row pt-2">
+        <div class="col">
+            <h2>Automation Projects<span style="color: var(--color-accent); font-family: 'Style Script', cursive;">.</span></h2>
+            <h5>QA Automation Site (Playwright + Pytest + FastAPI) | GitHub</h5>
+            <ul>
+                <li>Built automated UI tests for login and contact form, covering positive, negative, and boundary scenarios; cross-browser.</li>
+                <li>Added API checks and a GitHub Actions CI workflow; generated HTML test reports.</li>
+            </ul>
+            <h5>Automation Test Store (Playwright + JavaScript/TypeScript)</h5>
+            <ul>
+                <li>Automated user stories flows with stable selectors and reusable helpers.</li>
+                <li>Implemented Page Object Models and centralized test data to keep the suite maintainable and scalable.</li>
+                <li>Implemented fixtures to call methods without declaring them in each test.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="row pt-2">
+        <div class="col">
+            <h2>Education & Certifications<span style="color: var(--color-accent); font-family: 'Style Script', cursive;">.</span></h2>
+            <p>
+                B.S. Systems Engineer<br>
+                Cloud & Automation Tools Fundamentals, Ubuntu Linux, Scrum Fundamentals
+            </p>
+        </div>
+    </div>
+    <div class="row pt-2">
+        <div class="col">
+            <h2>Languages<span style="color: var(--color-accent); font-family: 'Style Script', cursive;">.</span></h2>
+            <p>Spanish: Native | English B2/C1</p>
+        </div>
+    </div>
+</div>
+<div class="container text-center pb-3 pt-3">
+    <div class="row">
+        <div class="col">
+            <h1>Want to discuss your next project<span style="color: var(--color-accent); font-family: 'Bebas Neue', cursive;">?</span></h1>
+            <a href="{% url 'contact' %}" class="disabled"><button class="btn btn-primary">Contact Me <i class="fas fa-arrow-right"></i></button></a>
+        </div>
+    </div>
+</div>
+{% endblock %}

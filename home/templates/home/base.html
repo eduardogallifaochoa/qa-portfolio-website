@@ -1,0 +1,97 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" class="dark-theme">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'home/css/style.css' %}" />
+    {% block head %}
+    <title>Home</title>
+    {% endblock %}
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg pb-0 pt-0">
+    <div class="container-fluid">
+      <a class="navbar-brand px-3" href="{% url 'home' %}">Eduardo Gallifa<span style="color: var(--color-accent)">.</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
+      </button>
+      <button class="theme-switch" aria-label="toggle theme" onclick="switchTheme()">
+        <i class="fas fa-adjust"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link {% if request.resolver_match.url_name == 'home' %}active{% endif %}" href="{% url 'home' %}">Home</a>
+          </li>
+          <!-- <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle {% if request.resolver_match.url_name == 'projects' %}active{% endif %}" href="{% url 'projects' %}" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Projects
+            </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Data Science</a></li>
+            <li><a class="dropdown-item" href="#">Web Development</a></li>
+            <li><a class="dropdown-item" href="#">Others</a></li>
+          </ul> -->
+        </li>
+          <li class="nav-item">
+            <a class="nav-link {% if request.resolver_match.url_name == 'about' %}active{% endif %}" href="{% url 'about' %}">About</a>
+          </li>
+        <li class="nav-item">
+            <a class="nav-link {% if request.resolver_match.url_name == 'contact' %}active{% endif %}" href="{% url 'contact' %}">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+    {% block content %}
+
+    {% endblock %}
+    <footer class="footer mt-auto">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h3>Quick links:</h3>
+                    <ul class="list-group">
+                        <li class="list-group-item"><a href="{% url 'about' %}">About</a></li>
+                        <li class="list-group-item"><a href="{% url 'contact' %}">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 offset-md-6 mt-5">
+                    <h3 class="signature text-center">Eduardo Gallifa<span style="color: var(--color-accent)">.</span></h3>
+                    <div class="row justify-content-center g-2">
+                        <div class="col-auto text-center">
+                            <a href="https://github.com/eduardogallifaochoa"><i class="fab fa-github"></i></a>
+                        </div>
+                        <div class="col-auto text-center">
+                            <a href="mailto:eduardogallifao@gmail.com"><i class="far fa-envelope"></i></a>
+                        </div>
+                        <div class="col-auto text-center">
+                            <a href="https://wa.me/528331210691"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                        <div class="col-auto text-center">
+                            <a href="https://www.linkedin.com/in/eduardogallifaochoa/"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                        <div class="col-auto text-center">
+                            <a href="https://www.youtube.com/@eduardogallifa"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row w-100 text-center" style="border-top: 1px solid var(--color-secondary)">
+                  <div class="col">
+                    <small class="text-muted">Copyright © 2026 Eduardo Gallifa.</small>
+                    <p><small class="text-muted">Stock images courtesy of <a class="text-muted" style="font-size: 14px;" href="http://pexels.com">
+                      pexels.com
+                    </a></small></p>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+    <script src="{% static 'home/main.js' %}"></script>
+</body>
+</html>
